@@ -1,0 +1,29 @@
+ion-header {
+    --background: white; /* Fondo blanco */
+  }
+  
+  ion-toolbar {
+    --background: white; /* Fondo blanco */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  ion-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  ion-buttons[slot="start"] {
+    margin-left: 0;
+  }
+  
+  ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  .icon-close {
+    color: black; 
+  }
