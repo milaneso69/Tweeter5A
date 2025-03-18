@@ -1,0 +1,7 @@
+{
+  "name": "Twetter",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
