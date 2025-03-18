@@ -1,2 +1,161 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+/* Colores de Twitter */
+$twitter-blue: #1DA1F2;
+$twitter-dark: #14171A;
+$twitter-light-gray: #AAB8C2;
+$twitter-extra-light-gray: #E1E8ED;
+$twitter-white: #FFFFFF;
+
+/* Estilos generales */
+ion-content {
+  background-color: $twitter-white;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: $twitter-dark;
+}
+
+/* Header */
+ion-toolbar {
+  --background: $twitter-white;
+  --color: $twitter-dark;
+  border-bottom: 1px solid $twitter-extra-light-gray;
+
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  ion-buttons {
+    ion-icon {
+      color: $twitter-blue;
+      font-size: 24px;
+    }
+  }
+}
+
+/* Tweets */
+.tweet {
+  padding: 16px;
+  border-bottom: 1px solid $twitter-extra-light-gray;
+
+  .tweet-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .user-info {
+      flex: 1;
+
+      .name {
+        font-weight: bold;
+        font-size: 16px;
+        color: $twitter-dark;
+      }
+
+      .username {
+        font-size: 14px;
+        color: $twitter-light-gray;
+      }
+    }
+
+    .options {
+      ion-icon {
+        color: $twitter-light-gray;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: $twitter-dark;
+    margin-bottom: 12px;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .action-button {
+      display: flex;
+      align-items: center;
+      color: $twitter-light-gray;
+
+      ion-icon {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: $twitter-blue;
+      }
+    }
+  }
+}
+
+/* Botón de Tweet */
+.tweet-button {
+  --background: $twitter-blue;
+  --color: $twitter-white;
+  --border-radius: 24px;
+  font-weight: bold;
+  text-transform: none;
+  margin: 16px;
+}
+
+/* Footer (Tabs) */
+ion-tab-bar {
+  --background: $twitter-white;
+  --color: $twitter-light-gray;
+  --color-selected: $twitter-blue;
+  border-top: 1px solid $twitter-extra-light-gray;
+
+  ion-tab-button {
+    ion-icon {
+      font-size: 24px;
+    }
+
+    ion-label {
+      font-size: 12px;
+    }
+  }
+}
+
+/* Estilos para el buscador */
+ion-searchbar {
+  --background: $twitter-extra-light-gray;
+  --color: $twitter-dark;
+  --placeholder-color: $twitter-light-gray;
+  --border-radius: 24px;
+}
+
+/* Notificaciones */
+.notification {
+  padding: 16px;
+  border-bottom: 1px solid $twitter-extra-light-gray;
+
+  .icon {
+    color: $twitter-blue;
+    font-size: 24px;
+    margin-right: 12px;
+  }
+
+  .message {
+    font-size: 14px;
+    color: $twitter-dark;
+  }
+}
