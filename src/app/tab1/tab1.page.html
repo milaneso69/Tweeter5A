@@ -10,7 +10,7 @@
 <ion-content>
   <div class="tweet">
     <div class="tweet-header">
-      <img src="https://via.placeholder.com/48" alt="Avatar" class="avatar" />
+      <img src="/assets/icon/user.png" alt="Avatar" class="avatar" />
       <div class="user-info">
         <div class="name">John Doe</div>
         <div class="username">johndoe</div>
@@ -40,6 +40,30 @@
       </div>
     </div>
   </div>
+
+  <ion-list>
+    <ion-item *ngFor="let post of posts">
+      <ion-avatar [style.alignSelf]="'flex-start'" [style.marginRight]="'10px'">
+        <img [src]="post.avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ post.author }} <small style="color: darkgray;">{{ post.email }} . {{ post.time }}</small></h2>
+        <p>{{ post.content }}</p>
+          <ion-card>
+            <img [src]="post.img" [style.width]="'100%'" [style.height]="'auto'" />
+          </ion-card>
+        <ion-row class="actions">
+          <ion-button fill="clear" (click)="commentOnPost(post)">
+            <ion-icon name="chatbubble"></ion-icon> {{ post.comments.length }}
+          </ion-button>
+          <ion-button fill="clear" (click)="likePost(post)">
+            <ion-icon name="heart" [color]="post.liked ? 'danger' : 'medium'"></ion-icon>
+            {{ post.likes }}
+          </ion-button>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
