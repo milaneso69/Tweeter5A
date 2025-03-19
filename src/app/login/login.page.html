@@ -12,8 +12,35 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content [fullscreen]="true">
-  <div class="login-text">Sign in to Tweeter</div>
+  <div class="login-container">
+    <div class="login-text">Sign in to Twitter</div>
 
+    <ion-button color="white" (click)="login()" class="google-button">
+      <ion-icon slot="start" name="logo-google"></ion-icon>
+      Sign in with Google
+    </ion-button>
+
+    <ion-button color="black" class="apple-button">
+      <ion-icon slot="start" name="logo-apple"></ion-icon>
+      Sign in with Apple
+    </ion-button>
+
+    <ion-button color="danger" class="log-out" (click)="logout()" *ngIf="user">
+      Log out
+    </ion-button>
+
+   
+    <div *ngIf="user" class="user-info">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Welcome, {{ user?.displayName }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p><strong>Email:</strong> {{ user?.email }}</p>
+          <img [src]="user?.photoUrl" *ngIf="user?.photoUrl" alt="Profile Picture" />
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>
