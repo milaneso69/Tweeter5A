@@ -1,13 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon class="icon-close" name="close"></ion-icon> <!-- Botón de cierre (X) -->
+      <ion-button (click)="goToHome()">
+        <ion-icon class="icon-close" name="close"></ion-icon> 
       </ion-button>
     </ion-buttons>
 
     <ion-title>
-      <ion-icon id="logo-twit" name="logo-twitter"></ion-icon> <!-- Ícono de Twitter -->
+      <ion-icon id="logo-twit" name="logo-twitter"></ion-icon> 
     </ion-title>
   </ion-toolbar>
 </ion-header>

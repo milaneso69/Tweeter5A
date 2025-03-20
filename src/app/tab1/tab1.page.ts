@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -35,7 +36,7 @@ export class Tab1Page implements OnInit{
       }
     ];
   
-    constructor(private alertCtrl: AlertController) {}
+    constructor(private alertCtrl: AlertController, private router:Router) {}
   
     likePost(post: any) {
       post.liked = !post.liked;
@@ -96,6 +97,10 @@ export class Tab1Page implements OnInit{
         ]
       });
       await alert.present();
+    }
+
+    goToLogin() {
+      this.router.navigate(['/login']);
     }
   
     ngOnInit() {
