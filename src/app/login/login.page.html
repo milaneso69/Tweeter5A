@@ -40,20 +40,7 @@
       Forgot password?
     </ion-button>
 
-    <ion-button shape="round" color="danger" class="log-out" (click)="logout()" *ngIf="user">
-      Log out
-    </ion-button>
 
-    <div *ngIf="user" class="user-info">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>Welcome, {{ user?.displayName }}</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p><strong>Email:</strong> {{ user?.email }}</p>
-          <img [src]="user?.photoUrl" *ngIf="user?.photoUrl" alt="Profile Picture" />
-        </ion-card-content>
-      </ion-card>
-    </div>
+    
   </div>
 </ion-content>

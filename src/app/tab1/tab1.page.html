@@ -1,65 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="goToLogin()">Login</ion-button>
-    </ion-buttons>
-    <ion-title>Twitter Clone</ion-title>
+    <ion-title>Twitter</ion-title>
+    
     <ion-buttons slot="end">
-      <ion-icon name="star-outline"></ion-icon>
+      <ion-button (click)="toggleProfileMenu()">
+        <ion-avatar>
+          <img [src]="user?.photoUrl || '/assets/icon/user.png'" alt="User Avatar" />
+        </ion-avatar>
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="tweet">
-    <div class="tweet-header">
-      <img src="/assets/icon/user.png" alt="Avatar" class="avatar" />
-      <div class="user-info">
-        <div class="name">John Doe</div>
-        <div class="username">johndoe</div>
-      </div>
-      <div class="options">
-        <ion-icon name="ellipsis-horizontal"></ion-icon>
-      </div>
-    </div>
-    <div class="content">
-      kanye west is a neonazi
-    </div>
-    <div class="actions">
-      <div class="action-button">
-        <ion-icon name="chatbubble-outline"></ion-icon>
-        <span>12</span>
-      </div>
-      <div class="action-button">
-        <ion-icon name="repeat-outline"></ion-icon>
-        <span>5</span>
-      </div>
-      <div class="action-button">
-        <ion-icon name="heart-outline"></ion-icon>
-        <span>20</span>
-      </div>
-      <div class="action-button">
-        <ion-icon name="share-outline"></ion-icon>
-      </div>
-    </div>
+  <div class="profile-menu" *ngIf="showProfileMenu">
+    <ion-card>
+      <ion-card-header>
+        <ion-avatar>
+          <img [src]="user?.photoUrl || '/assets/icon/user.png'" alt="User Avatar" />
+        </ion-avatar>
+        <ion-card-title>{{ user?.displayName || "Guest" }}</ion-card-title>
+        <ion-card-subtitle>{{ user?.email || "No email" }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-button expand="full" fill="outline">Settings</ion-button>
+        <ion-button expand="full" fill="outline">Profile</ion-button>
+        <ion-button expand="full" fill="solid" (click)="goToLogin()">Login</ion-button>
+        <ion-button expand="full" fill="solid" color="danger" (click)="logout()">Log out</ion-button>
+      </ion-card-content>
+    </ion-card>
   </div>
 
   <ion-list>
     <ion-item *ngFor="let post of posts">
-      <ion-avatar [style.alignSelf]="'flex-start'" [style.marginRight]="'10px'">
+      <ion-avatar slot="start">
         <img [src]="post.avatar" />
       </ion-avatar>
       <ion-label>
-        <h2>{{ post.author }} <small style="color: darkgray;">{{ post.email }} . {{ post.time }}</small></h2>
+        <h2>{{ post.author }} <small style="color: darkgray;">{{ post.email }} · {{ post.time }}</small></h2>
         <p>{{ post.content }}</p>
-          <ion-card>
-            <img [src]="post.img" [style.width]="'100%'" [style.height]="'auto'" />
-          </ion-card>
+        <ion-card *ngIf="post.img">
+          <img [src]="post.img" [style.width]="'100%'" />
+        </ion-card>
         <ion-row class="actions">
-          <ion-button fill="clear" (click)="commentOnPost(post)">
+          <ion-button fill="clear">
             <ion-icon name="chatbubble"></ion-icon> {{ post.comments.length }}
           </ion-button>
-          <ion-button fill="clear" (click)="likePost(post)">
+          <ion-button fill="clear">
             <ion-icon name="heart" [color]="post.liked ? 'danger' : 'medium'"></ion-icon>
             {{ post.likes }}
           </ion-button>

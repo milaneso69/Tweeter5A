@@ -19,9 +19,9 @@ export class LoginPage implements OnInit {
 
   async login() {
     try {
-      // Inicia sesión con Google y asigna los datos del usuario
-      this.user = await this.authService.loginWithGoogle();
-      console.log('Usuario logueado:', this.user);
+      // Inicia sesión con Google y redirige a Tab1
+      await this.authService.loginWithGoogle();
+      this.router.navigate(['/tabs/tab1']);
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
     }
