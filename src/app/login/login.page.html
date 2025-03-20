@@ -2,35 +2,48 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button>
-        <ion-icon class="icon-close" name="close"></ion-icon> 
+        <ion-icon class="icon-close" name="close"></ion-icon> <!-- Botón de cierre (X) -->
       </ion-button>
     </ion-buttons>
 
     <ion-title>
-      <ion-icon id="logo-twit" name="logo-twitter"></ion-icon>
+      <ion-icon id="logo-twit" name="logo-twitter"></ion-icon> <!-- Ícono de Twitter -->
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="login-container">
+  <div class="content-container">
     <div class="login-text">Sign in to Twitter</div>
 
-    <ion-button color="white" (click)="login()" class="google-button">
+    <ion-button shape="round" color="light" (click)="login()" class="google-button">
       <ion-icon slot="start" name="logo-google"></ion-icon>
       Sign in with Google
     </ion-button>
 
-    <ion-button color="black" class="apple-button">
+    <ion-button shape="round" color="dark" class="apple-button">
       <ion-icon slot="start" name="logo-apple"></ion-icon>
       Sign in with Apple
     </ion-button>
 
-    <ion-button color="danger" class="log-out" (click)="logout()" *ngIf="user">
+    <div class="or-container">
+      <span class="or-text">or</span>
+    </div>
+
+    <ion-input fill="outline" placeholder="  Phone, email, or username"></ion-input>
+
+    <ion-button shape="round" color="dark" class="next-button">
+      Next
+    </ion-button>
+
+    <ion-button shape="round" color="light" class="password-button">
+      Forgot password?
+    </ion-button>
+
+    <ion-button shape="round" color="danger" class="log-out" (click)="logout()" *ngIf="user">
       Log out
     </ion-button>
 
-   
     <div *ngIf="user" class="user-info">
       <ion-card>
         <ion-card-header>

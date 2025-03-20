@@ -1,11 +1,10 @@
+/* Estilos para el header */
 ion-header {
-  --background: white;
-  /* Fondo blanco */
+  --background: white; /* Fondo blanco */
 }
 
 ion-toolbar {
-  --background: white;
-  /* Fondo blanco */
+  --background: white; /* Fondo blanco */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,56 +16,117 @@ ion-title {
   transform: translateX(-50%);
 }
 
-ion-buttons[slot="start"] {
-  margin-left: 0;
-}
-
-ion-button {
-  --padding-start: 0;
-  --padding-end: 0;
-}
-
+/* Estilos para el ícono de cerrar (X) */
 .icon-close {
-  color: black;
+  color: black; /* Color del ícono de cerrar */
 }
 
+/* Estilos para el ícono de Twitter en el título */
+#logo-twit {
+  color: #1DA1F2; /* Color azul de Twitter */
+  font-size: 24px; /* Tamaño del ícono */
+}
+
+/* Estilos para el texto de login */
 .login-text {
   font-size: 1.7rem;
   font-weight: 700;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px; /* Espacio inferior */
 }
 
+/* Contenedor principal para limitar el ancho */
+.content-container {
+  max-width: 400px; /* Ancho máximo del contenido */
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 0 16px; /* Espaciado lateral */
+}
 
-.log-out {
+/* Estilos para los botones */
+.google-button,
+.apple-button,
+.log-out
+{
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 300px; /* Limita el ancho máximo */
+  margin: 20px auto; /* Centra los botones y añade margen */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  border-radius: 25px;
 }
 
-.google-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  border-radius: 25px;
-  border: 0.5px solid black;
-  background-color: white;
-  color: black;
-}
-
-.apple-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  border-radius: 25px;
-  color: white;
-  background-color: black;
-}
-
+/* Estilos específicos para el botón de Apple */
 .apple-button ion-icon {
-  color: white;
+  color: white; /* Color del ícono de Apple */
 }
+
+/* Estilos para el contenedor de "or" */
+.or-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto; /* Centra el contenedor y añade margen */
+  max-width: 300px; /* Limita el ancho máximo */
+}
+
+.or-text {
+  padding: 0 10px; /* Espacio entre el texto y las líneas */
+  background-color: white; /* Fondo para que el texto no se superponga con las líneas */
+  position: relative;
+  z-index: 1; /* Asegura que el texto esté por encima de las líneas */
+}
+
+.or-container::before,
+.or-container::after {
+  content: '';
+  flex: 1; /* Hace que las líneas ocupen el espacio restante */
+  height: 1px; /* Grosor de la línea */
+  background-color: #000; /* Color de la línea */
+  position: relative;
+}
+
+.or-container::before {
+  margin-right: 10px; /* Espacio entre la línea izquierda y el texto */
+}
+
+.or-container::after {
+  margin-left: 10px; /* Espacio entre la línea derecha y el texto */
+}
+
+/* Estilos para la sección de información del usuario */
+.user-info {
+  margin-top: 20px;
+}
+
+.user-info ion-card {
+  max-width: 400px; /* Limita el ancho de la tarjeta */
+  margin: 0 auto; /* Centra la tarjeta */
+}
+
+.user-info img {
+  max-width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+}
+
+ion-input {
+  --border-radius: 4px; /* Bordes redondeados */
+  --background: rgb(245, 245, 245); /* Fondo blanco */ 
+}
+
+
+.next-button,
+.password-button {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 300px; /* Limita el ancho máximo */
+  margin: 10px auto; /* Centra los botones y añade margen */
+  display: block; /* Fuerza a que los botones se apilen verticalmente */
+}
+
+/* Margen inferior adicional para el botón Next */
+.next-button {
+  margin-bottom: 20px; /* Separa el botón Next del botón Forgot password */
+}
+
+
+
