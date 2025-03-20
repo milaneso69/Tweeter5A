@@ -1,10 +1,9 @@
-/* Estilos para el header */
 ion-header {
-  --background: white; /* Fondo blanco */
+  --background: white;
 }
 
 ion-toolbar {
-  --background: white; /* Fondo blanco */
+  --background: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,117 +15,103 @@ ion-title {
   transform: translateX(-50%);
 }
 
-/* Estilos para el ícono de cerrar (X) */
 .icon-close {
-  color: black; /* Color del ícono de cerrar */
+  color: black;
 }
 
-/* Estilos para el ícono de Twitter en el título */
 #logo-twit {
-  color: #1DA1F2; /* Color azul de Twitter */
-  font-size: 24px; /* Tamaño del ícono */
+  color: #1DA1F2;
+  font-size: 24px;
 }
 
-/* Estilos para el texto de login */
 .login-text {
   font-size: 1.7rem;
   font-weight: 700;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Espacio inferior */
+  margin-bottom: 20px;
 }
 
-/* Contenedor principal para limitar el ancho */
 .content-container {
-  max-width: 400px; /* Ancho máximo del contenido */
-  margin: 0 auto; /* Centrar el contenedor */
-  padding: 0 16px; /* Espaciado lateral */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* Estilos para los botones */
 .google-button,
 .apple-button,
-.log-out
-{
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  max-width: 300px; /* Limita el ancho máximo */
-  margin: 20px auto; /* Centra los botones y añade margen */
+.log-out {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Estilos específicos para el botón de Apple */
 .apple-button ion-icon {
-  color: white; /* Color del ícono de Apple */
+  color: white;
 }
 
-/* Estilos para el contenedor de "or" */
 .or-container {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 20px auto; /* Centra el contenedor y añade margen */
-  max-width: 300px; /* Limita el ancho máximo */
+  margin: 20px auto;
+  max-width: 300px;
 }
 
 .or-text {
-  padding: 0 10px; /* Espacio entre el texto y las líneas */
-  background-color: white; /* Fondo para que el texto no se superponga con las líneas */
+  padding: 0 10px;
+  background-color: white;
   position: relative;
-  z-index: 1; /* Asegura que el texto esté por encima de las líneas */
+  z-index: 1;
 }
 
 .or-container::before,
 .or-container::after {
   content: '';
-  flex: 1; /* Hace que las líneas ocupen el espacio restante */
-  height: 1px; /* Grosor de la línea */
-  background-color: #000; /* Color de la línea */
+  flex: 1;
+  height: 1px;
+  background-color: #000;
   position: relative;
 }
 
 .or-container::before {
-  margin-right: 10px; /* Espacio entre la línea izquierda y el texto */
+  margin-right: 10px;
 }
 
 .or-container::after {
-  margin-left: 10px; /* Espacio entre la línea derecha y el texto */
+  margin-left: 10px;
 }
 
-/* Estilos para la sección de información del usuario */
 .user-info {
   margin-top: 20px;
 }
 
 .user-info ion-card {
-  max-width: 400px; /* Limita el ancho de la tarjeta */
-  margin: 0 auto; /* Centra la tarjeta */
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .user-info img {
-  max-width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
-  border-radius: 8px; /* Bordes redondeados */
+  max-width: 100%;
+  border-radius: 8px;
 }
 
 ion-input {
-  --border-radius: 4px; /* Bordes redondeados */
-  --background: rgb(245, 245, 245); /* Fondo blanco */ 
+  --border-radius: 4px;
+  --background: rgb(245, 245, 245);
 }
-
 
 .next-button,
 .password-button {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  max-width: 300px; /* Limita el ancho máximo */
-  margin: 10px auto; /* Centra los botones y añade margen */
-  display: block; /* Fuerza a que los botones se apilen verticalmente */
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: block;
 }
 
-/* Margen inferior adicional para el botón Next */
 .next-button {
-  margin-bottom: 20px; /* Separa el botón Next del botón Forgot password */
+  margin-bottom: 20px;
 }
-
-
-
