@@ -76,7 +76,7 @@ export class Tab1Page implements OnInit {
       author: "StrategyQueen",
       email: "strategyqueen@example.com",
       time: "3 hours",
-      avatar: "https://imgs.search.brave.com/NDixP9wgOAh7vRKivsQYOu5H3SwnyePskmO8-rkrx1A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni80MzUxLzQzNTE0/MTcucG5nP3NlbXQ9/YWlzX2h5YnJpZA",
+      avatar: "https://imgs.search.brave.com/NDixP9wgOAh7vRKivsQYOu5H3SwnyePskmO8-rkrx1A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4t/aWNvbnMtcG5nLmZy/ZWVwaWsuY29tLzI1/Ni80MzUxLzQzNTE0/MTcucG5nP3NlbT0/YWlzX2h5YnJpZA",
       content: "Viendo mi progreso en Age of Empires IV. ¡No hay nada como una buena estrategia!",
       img: "https://imgs.search.brave.com/k0Z_4FHE-SQXWYC5de5y5hchm4VcgBqzwpwXzIAknkE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJhY2Nlc3Mu/Y29tL2Z1bGwvMTEx/MDk4OC5qcGc",
       liked: true,

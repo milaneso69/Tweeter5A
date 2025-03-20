@@ -44,10 +44,10 @@
           <img [src]="post.img" [style.width]="'100%'" />
         </ion-card>
         <ion-row class="actions">
-          <ion-button fill="clear">
+          <ion-button fill="clear" (click)="commentOnPost(post)">
             <ion-icon name="chatbubble"></ion-icon> {{ post.comments.length }}
           </ion-button>
-          <ion-button fill="clear">
+          <ion-button fill="clear" (click)="likePost(post)">
             <ion-icon name="heart" [color]="post.liked ? 'danger' : 'medium'"></ion-icon>
             {{ post.likes }}
           </ion-button>
@@ -57,7 +57,7 @@
   </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button>
+    <ion-fab-button (click)="openPostModal()">
       <ion-icon name="logo-twitter"></ion-icon>
     </ion-fab-button>
   </ion-fab>
