@@ -38,9 +38,9 @@ export class HomePage implements OnInit {
       author: "SonicMania",
       email: "sonic@gmail.com",
       time: "40 min",
-      avatar: "assets/icon/perfil2.jpg",
+      avatar: "assets/icon/sonic_25_anos_3618.webp",
       content: "Se supone que ambos son el mismo Sonic, ¿verdad? El Clásico es igual que el Moderno, pero más joven, y el Moderno es el mismo Sonic, pero mayor que el Clásico. Por alguna razón, los veo como personajes diferentes, como entidades distintas. Para mí, el Sonic Moderno es Sonic y el Sonic Clásico es solo otro personaje, no el mismo Sonic. ¿Alguien los ve como el mismo personaje/persona? Sé que puede ser una pregunta tonta y aleatoria, pero me pareció interesante, sobre todo con el Clásico allá por 2017.",
-      img: "assets/icon/img3.png",
+      img: "assets/icon/sonic.png",
       liked: false,
       likes: 500,
       comments: []
@@ -50,9 +50,9 @@ export class HomePage implements OnInit {
       author: "BATMAN",
       email: "batman3002@gmail.com",
       time: "30 min",
-      avatar: "assets/icon/perfil7.jpg",
+      avatar: "assets/icon/adam-west-as-bruce-wayne-batman-in-the-movie-batman-1966.webp",
       content: "¿Quién es el más fuerte, Batman o Superman? En el terreno de pelear contra criminales, Clark Kent definitivamente le gana a Batman, pero, en la vida real de los simples mortales, Bruce Wayne sin duda lleva la ventaja, así que podemos concluir que esto es un empate (hasta que una caída en la bolsa haga que bruce pierda su fortuna).",
-      img: "assets/icon/img6.jpg",
+      img: "assets/icon/batmanwalppaper.jpg",
       liked: false,
       likes: 924,
       comments: []
