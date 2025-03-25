@@ -1,0 +1,7 @@
+{
+  "name": "tweeter5A",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
