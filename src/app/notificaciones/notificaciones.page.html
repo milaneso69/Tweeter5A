@@ -1,13 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>notificaciones</ion-title>
+    <ion-title>
+      Centro de notificaciones
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">notificaciones</ion-title>
+      <ion-title size="large">Notificaciones</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+
+  <!-- Tarjeta de notificación -->
+  <ion-card>
+    <ion-card-header>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img src="https://th.bing.com/th/id/OIP.q7sfHQeSL7b6B5YehBQa1gHaEv?rs=1&pid=ImgDetMain" alt="Foto de usuario" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Lionel Messi <ion-icon name="person-add" style="color: blue;"></ion-icon></h2>
+          <p>&#64;leomessi · 2m</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>te ha enviado una solicitud de amistad.</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Otra tarjeta de notificación -->
+  <ion-card>
+    <ion-card-header>
+      <ion-item lines="none">
+        <ion-thumbnail slot="start">
+          <img src="https://th.bing.com/th/id/R.f0a25a3356b1ddb46ab6b1c8086d11bf?rik=HhBwMYMG6ZWh1w&pid=ImgRaw&r=0" alt="Foto de usuario" />
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Tik Tok <ion-icon name="at" style="color: blue;"></ion-icon></h2>
+          <p>&#64;tiktok · 5m</p>
+        </ion-label>
+      </ion-item>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p><strong>te ha mencionado en un comentario.</strong></p>
+    </ion-card-content>
+  </ion-card>
