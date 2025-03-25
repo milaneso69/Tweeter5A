@@ -1,20 +1,16 @@
 <ion-tabs>
-
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home" href="/tabs/home">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Inicio</ion-label>
+  <ion-tab-bar slot="bottom" class="custom-tab-bar">
+    <ion-tab-button tab="home" href="/tabs/home" class="tab-button">
+      <ion-icon name="home-outline"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="buscador" href="/tabs/buscador">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Buscador</ion-label>
+    <ion-tab-button tab="buscador" href="/tabs/buscador" class="tab-button">
+      <ion-icon name="search-outline"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="notificaciones" href="/tabs/notificaciones">
-      <ion-icon aria-hidden="true" name="square"></ion-icon>
-      <ion-label>Notificaciones</ion-label>
+    <ion-tab-button tab="notificaciones" href="/tabs/notificaciones" class="tab-button">
+      <ion-icon name="notifications-outline"></ion-icon>
+      <ion-badge class="pulse-badge">!</ion-badge>
     </ion-tab-button>
   </ion-tab-bar>
-
 </ion-tabs>

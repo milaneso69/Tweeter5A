@@ -1,1 +1,118 @@
+.custom-tab-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+    border-radius: 50px;
+    height: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    ion-tab-button {
+      --background: transparent;
+      --color: #666;
+      --color-selected: #3880ff;
+      --padding-bottom: 0;
+      --padding-top: 0;
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+  
+      ion-icon {
+        font-size: 1.5rem;
+      }
+  
+      ion-badge {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+  
+  /* Ocultar etiquetas para un look más minimalista */
+  ion-label {
+    display: none;
+  }
 
+  .custom-tab-bar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 300px;
+    border-radius: 50px;
+    height: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    ion-tab-button {
+      --background: transparent;
+      --color: #666;
+      --color-selected: #3880ff;
+      --padding-bottom: 0;
+      --padding-top: 0;
+      min-width: 50px;
+      height: 50px;
+      border-radius: 50%;
+  
+      ion-icon {
+        font-size: 1.5rem;
+      }
+  
+      ion-badge {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 10px;
+      }
+    }
+  }
+  
+  /* Ocultar etiquetas para un look más minimalista */
+  ion-label {
+    display: none;
+  }
+
+  .custom-tab-bar {
+    background: rgba(197, 232, 247, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 
+    0 -5px 10px rgba(0, 0, 0, 0.1),
+    0 -10px 20px rgba(0, 0, 0, 0.08);
+
+
+    ion-tab-button {
+        transition: transform 0.3s ease;
+        
+        &.tab-selected {
+          transform: translateY(-8px);
+          
+          ion-icon {
+            color: #128fdd; /* Azul Twitter */
+          }
+        }
+      }
+
+  }
+
+  
+
+  
