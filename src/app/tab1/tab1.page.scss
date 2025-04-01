@@ -1,0 +1,215 @@
+ion-toolbar {
+  --background: white;
+  --color: black;
+  --border-color: #e7e7e7;
+  --border-width: 0 0 1px 0;
+}
+
+ion-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.header-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 250px;
+  z-index: 1000;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.profile-menu ion-card {
+  box-shadow: none;
+  border-radius: 10px;
+}
+
+.profile-menu ion-card-header {
+  text-align: center;
+}
+
+.profile-menu ion-avatar {
+  display: block;
+  margin: 0 auto 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.profile-menu ion-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.profile-menu ion-card-subtitle {
+  color: #657786;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.post-input {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e7e7e7;
+  background: white;
+}
+
+.post-input ion-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-input ion-textarea {
+  flex: 1;
+  --background: #f5f8fa;
+  --border-radius: 20px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  font-size: 16px;
+  color: #657786;
+}
+
+.post-input .post-button {
+  --border-radius: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  height: 36px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.posts-list ion-item {
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  --border-color: #e7e7e7;
+}
+
+.posts-list ion-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-header {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.post-meta {
+  color: #657786;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.post-content {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.post-image {
+  margin: 10px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.actions {
+  margin-top: 5px;
+  color: #657786;
+}
+
+.actions ion-button {
+  --color: #657786;
+  font-size: 13px;
+}
+
+.actions ion-icon {
+  margin-right: 5px;
+}
+
+ion-fab-button {
+  --background: #1DA1F2;
+  --background-activated: #1a91da;
+}
+
+.comments-section {
+  margin-top: 10px;
+  padding-left: 50px;
+  border-left: 2px solid #e7e7e7;
+}
+
+.comment-item {
+  --padding-start: 0;
+  --padding-end: 15px;
+  --padding-top: 5px;
+  --padding-bottom: 5px;
+}
+
+.comment-item ion-avatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+
+.comment-header {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+
+.comment-meta {
+  color: #657786;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.comment-content {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.comment-actions {
+  margin-top: 5px;
+  color: #657786;
+}
+
+.comment-actions ion-button {
+  --color: #657786;
+  font-size: 12px;
+}
+
+.comment-actions ion-icon {
+  margin-right: 5px;
+}
+
+.add-comment-button {
+  --color: #1DA1F2;
+  font-size: 14px;
+  margin-left: 10px;
+}

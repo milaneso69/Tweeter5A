@@ -1,0 +1,117 @@
+ion-header {
+  --background: white;
+}
+
+ion-toolbar {
+  --background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-close {
+  color: black;
+}
+
+#logo-twit {
+  color: #1DA1F2;
+  font-size: 24px;
+}
+
+.login-text {
+  font-size: 1.7rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.google-button,
+.apple-button,
+.log-out {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apple-button ion-icon {
+  color: white;
+}
+
+.or-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+.or-text {
+  padding: 0 10px;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.or-container::before,
+.or-container::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+}
+
+.or-container::before {
+  margin-right: 10px;
+}
+
+.or-container::after {
+  margin-left: 10px;
+}
+
+.user-info {
+  margin-top: 20px;
+}
+
+.user-info ion-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.user-info img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+ion-input {
+  --border-radius: 4px;
+  --background: rgb(245, 245, 245);
+}
+
+.next-button,
+.password-button {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  display: block;
+}
+
+.next-button {
+  margin-bottom: 20px;
+}

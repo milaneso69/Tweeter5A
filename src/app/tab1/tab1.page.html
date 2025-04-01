@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>X</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleProfileMenu()">
+        <ion-avatar class="header-avatar">
+          <img [src]="user?.photoUrl || '/assets/icon/user.png'" alt="User Avatar" />
+        </ion-avatar>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-menu" *ngIf="showProfileMenu">
+    <ion-card>
+      <ion-card-header>
+        <ion-avatar>
+          <img [src]="user?.photoUrl || '/assets/icon/user.png'" alt="User Avatar" />
+        </ion-avatar>
+        <ion-card-title>{{ user?.displayName || "Usuario" }}</ion-card-title>
+        <ion-card-subtitle>{{ user?.email || "Sin correo" }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" fill="outline">Configuración</ion-button>
+        <ion-button expand="full" fill="outline">Perfil</ion-button>
+        <ion-button expand="full" fill="solid" (click)="goToLogin()">Iniciar Sesión</ion-button>
+        <ion-button expand="full" fill="solid" color="danger" (click)="logout()">Cerrar Sesión</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="post-input">
+    <ion-avatar>
+      <img [src]="user?.photoUrl || '/assets/icon/user.png'" alt="User Avatar" />
+    </ion-avatar>
+    <ion-textarea placeholder="¿Qué está pasando?" (click)="openPostModal()" readonly></ion-textarea>
+    <ion-button fill="solid" class="post-button" (click)="openPostModal()">Postear</ion-button>
+  </div>
+
+  <ion-list class="posts-list">
+    <ion-item *ngFor="let post of posts" lines="none">
+      <ion-avatar slot="start">
+        <img [src]="post.avatar" />
+      </ion-avatar>
+      <ion-label>
+        <h2 class="post-header">
+          {{ post.author }} <span class="post-meta">{{ post.email }} · {{ post.time }}</span>
+        </h2>
+        <p class="post-content">{{ post.content }}</p>
+        <ion-card *ngIf="post.img" class="post-image">
+          <img [src]="post.img" [style.width]="'100%'" />
+        </ion-card>
+        <ion-row class="actions">
+          <ion-button fill="clear" (click)="toggleComments(post)">
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <span>{{ post.comments.length }}</span>
+          </ion-button>
+          <ion-button fill="clear">
+            <ion-icon name="repeat-outline"></ion-icon>
+            <span>0</span>
+          </ion-button>
+          <ion-button fill="clear" (click)="likePost(post)">
+            <ion-icon name="heart-outline" [color]="post.liked ? 'danger' : 'medium'"></ion-icon>
+            <span>{{ post.likes }}</span>
+          </ion-button>
+          <ion-button fill="clear">
+            <ion-icon name="share-outline"></ion-icon>
+          </ion-button>
+        </ion-row>
+
+        <!-- Comments Section -->
+        <div class="comments-section" *ngIf="post.showComments">
+          <ion-list lines="none">
+            <ion-item *ngFor="let comment of post.comments" class="comment-item">
+              <ion-avatar slot="start">
+                <img [src]="user?.photoUrl || '/assets/icon/user.png'" />
+              </ion-avatar>
+              <ion-label>
+                <h3 class="comment-header">
+                  {{ comment.author }} <span class="comment-meta">{{ comment.email }} · {{ comment.time }}</span>
+                </h3>
+                <p class="comment-content">{{ comment.content }}</p>
+                <ion-row class="comment-actions">
+                  <ion-button fill="clear">
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <span>0</span>
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                    <span>0</span>
+                  </ion-button>
+                  <ion-button fill="clear" (click)="likeComment(comment)">
+                    <ion-icon name="heart-outline" [color]="comment.liked ? 'danger' : 'medium'"></ion-icon>
+                    <span>{{ comment.likes }}</span>
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <ion-icon name="share-outline"></ion-icon>
+                  </ion-button>
+                </ion-row>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-button fill="clear" class="add-comment-button" (click)="commentOnPost(post)">
+            <ion-icon name="add-outline"></ion-icon> Añadir comentario
+          </ion-button>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="openPostModal()" color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
